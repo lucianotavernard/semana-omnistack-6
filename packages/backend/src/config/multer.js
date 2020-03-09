@@ -9,7 +9,6 @@ export default {
       cb(null, path.resolve(__dirname, '..', '..', 'tmp', 'uploads'))
     },
     filename: (req, file, cb) => {
-      console.log(file)
       crypto.randomBytes(16, (err, raw) => {
         if (err) cb(err)
 
