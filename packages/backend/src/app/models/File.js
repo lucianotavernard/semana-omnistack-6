@@ -23,7 +23,7 @@ const FileSchema = new Schema(
 )
 
 FileSchema.virtual('url').get(function() {
-  return `http://192.168.1.105:3333/files/${encodeURIComponent(this.path)}`
+  return `http://localhost:3333/files/${encodeURIComponent(this.path)}`
 })
 
 export default model('File', FileSchema)
